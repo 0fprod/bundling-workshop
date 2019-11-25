@@ -16,5 +16,28 @@
   "bugs": {
     "url": "https://github.com/franjpr/bundling-workshop/issues"
   },
-  "homepage": "https://github.com/franjpr/bundling-workshop#readme"
+  "homepage": "https://github.com/franjpr/bundling-workshop#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "@types/node": "^12.12.12",
+    "@types/webpack": "^4.41.0",
+    "@types/webpack-dev-server": "^3.4.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "html-webpack-loader": "0.0.5",
+    "mini-css-extract-plugin": "^0.8.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "sass": "^1.23.7",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  }
 }
