@@ -21,6 +21,11 @@ const config: webpack.Configuration = {
           useBabel: true,
           babelCore: '@babel/core'
         }
+      },
+      {
+        test: /\.(jpg|png)$/,
+        exclude: noModules,
+        loader: 'file-loader'
       }
     ]
   },

@@ -1,5 +1,7 @@
 @import './reset.scss';
 
 body {
+  display: flex;
+  justify-content: center;
   background-color: aliceblue;
 }
