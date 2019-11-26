@@ -2,7 +2,7 @@ import webpack from "webpack";
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from "path";
 
-const noModules: RegExp = /node_modules/;
+export const noModules: RegExp = /node_modules/;
 const basePath: string = __dirname;
 
 const config: webpack.Configuration = {
@@ -10,7 +10,7 @@ const config: webpack.Configuration = {
   resolve: {
     extensions: ['.js', '.ts', '.tsx']
   },
-  entry: ['./rootApp.tsx'],
+  entry: ['./rootApp.tsx', './master.scss'],
   module: {
     rules: [
       {
