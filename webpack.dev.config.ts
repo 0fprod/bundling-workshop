@@ -3,6 +3,7 @@ import { noModules } from './webpack.base.config';
 import base from './webpack.base.config';
 import webpack from 'webpack';
 import merge from 'webpack-merge';
+import  Dotenv  from 'dotenv-webpack';
 
 
 let config: webpack.Configuration = {
@@ -37,19 +38,13 @@ let config: webpack.Configuration = {
       }
     ]
   },
-  // plugins: [
-  //   new webpack.DefinePlugin({
-  //     "SOMEVAR" : JSON.stringify("true")
-  //   })
-  // ]
+  plugins: [
+    new Dotenv({
+      path: './.dev'
+    })
+  ]
 };
 
 config = merge(base, config);
 export default config;
 
-// export const myConfigFn = (env:any) => {
-//   env.myvariable = "34";
-//   return {
-//     ...config
-//   }
-// };

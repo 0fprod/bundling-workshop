@@ -4,6 +4,8 @@ import base from './webpack.base.config';
 import webpack from 'webpack';
 import merge from 'webpack-merge';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import  Dotenv  from 'dotenv-webpack';
+
 
 let config: webpack.Configuration = {
   output: {
@@ -40,7 +42,10 @@ let config: webpack.Configuration = {
     new MiniCssExtractPlugin({
       filename: '[name].[chunkhash].css',
       chunkFilename: '[id].css'
-    })
+    }),
+      new Dotenv({
+        path: './.prod'
+      })
   ]
 };
 
