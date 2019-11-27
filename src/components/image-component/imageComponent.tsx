@@ -1,11 +1,12 @@
 import React from "react"
-const reactLogo = require('../../assets/images/react.jpg');
+// import reactLogo from '../../assets/images/react.png';
+const reactLogo = require('../../assets/images/react.png');
+const webpackLogo = require('../../assets/images/webpack.png');
 
 export const ImageComponent = (() => {
-  console.log(reactLogo)
   return (
     <div> 
-      Image component works
+      <img src={webpackLogo.default}></img>
       <img src={reactLogo.default}></img>
     </div>
   );

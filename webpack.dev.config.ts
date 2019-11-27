@@ -2,8 +2,7 @@ import { noModules } from './webpack.base.config';
 
 import base from './webpack.base.config';
 import webpack from 'webpack';
-//import merge from 'webpack-merge';
-const merge = require('webpack-merge');
+import merge from 'webpack-merge';
 
 
 let config: webpack.Configuration = {

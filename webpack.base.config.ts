@@ -8,7 +8,7 @@ const basePath: string = __dirname;
 const config: webpack.Configuration = {
   context: path.join(basePath, "src"),
   resolve: {
-    extensions: ['.js', '.ts', '.tsx']
+    extensions: ['.js', '.ts', '.tsx', '.scss']
   },
   entry: ['./rootApp.tsx', './master.scss'],
   module: {

@@ -1,0 +1,12 @@
+@import '../../assets/scss/variables';
+
+.sampleClass {
+  color: $primary-color;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
