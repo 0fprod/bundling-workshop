@@ -3,3 +3,5 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 ReactDOM.render(<HelloWorldComponent />, document.getElementById('root'));
+
+console.log(process)

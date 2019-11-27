@@ -3,21 +3,20 @@ import { noModules } from './webpack.base.config';
 import base from './webpack.base.config';
 import webpack from 'webpack';
 import merge from 'webpack-merge';
-
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 let config: webpack.Configuration = {
   output: {
-    filename: '[name].js'
+    filename: '[name].[chunkhash].js'
   },
-  mode: 'development',
-  devtool: 'inline-source-map',
+  mode: 'production',
   module: {
     rules: [
       {
         test: /\.scss$/,
         exclude: noModules,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -37,19 +36,13 @@ let config: webpack.Configuration = {
       }
     ]
   },
-  // plugins: [
-  //   new webpack.DefinePlugin({
-  //     "SOMEVAR" : JSON.stringify("true")
-  //   })
-  // ]
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].[chunkhash].css',
+      chunkFilename: '[id].css'
+    })
+  ]
 };
 
 config = merge(base, config);
 export default config;
-
-// export const myConfigFn = (env:any) => {
-//   env.myvariable = "34";
-//   return {
-//     ...config
-//   }
-// };
