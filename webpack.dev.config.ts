@@ -40,7 +40,7 @@ let config: webpack.Configuration = {
   },
   plugins: [
     new Dotenv({
-      path: './.dev'
+      path: './dev.env'
     })
   ]
 };
