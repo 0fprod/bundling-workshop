@@ -44,7 +44,7 @@ let config: webpack.Configuration = {
       chunkFilename: '[id].css'
     }),
       new Dotenv({
-        path: './.prod'
+        path: './prod.env'
       })
   ]
 };
