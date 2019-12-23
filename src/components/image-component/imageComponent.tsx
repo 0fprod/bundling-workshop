@@ -1,13 +1,13 @@
 import React from "react"
 // import reactLogo from '../../assets/images/react.png';
 const reactLogo = require('../../assets/images/react.png');
-const webpackLogo = require('../../assets/images/webpack.png');
+const parcelLogo = require('../../assets/images/parcel.png');
 
 export const ImageComponent = (() => {
   return (
     <div> 
-      <img src={webpackLogo.default}></img>
-      <img src={reactLogo.default}></img>
+      <img src={parcelLogo}></img>
+      <img src={reactLogo}></img>
     </div>
   );
 })
